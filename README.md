@@ -35,24 +35,24 @@ This repo contains basic example code that can be run on our test bench for illu
        }
      }
 - Subsystems contain the methods to actuate motors/pneumatics as well as the controller definitions and declarations (Example: **IntakeSubsystem.java**)
-      public class IntakeSubsystem extends SubsystemBase {
-       private final WPI_TalonSRX IntakeMotor = new WPI_TalonSRX(6);
-       /** Creates a new IntakeSubsystem. */
-       public IntakeSubsystem() {}
 
-       **public void IntakeIn(){
+       private final WPI_TalonSRX IntakeMotor = new WPI_TalonSRX(6);
+       
+       ...
+       
+       public void IntakeIn(){
          //set motor to 100% output in positive direction
          IntakeMotor.set(.3);
-       }**
+       }
 
-       **public void IntakeOut(){
+       public void IntakeOut(){
          //sets motor to 100% output in negative direction
          IntakeMotor.set(-0.3);
-       }**
+       }
 
-       **public void IntakeStop(){
+       public void IntakeStop(){
          IntakeMotor.stopMotor();
-       }**
+       }
        @Override
        public void periodic() {
          // This method will be called once per scheduler run
