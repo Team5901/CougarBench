@@ -9,11 +9,11 @@ This repo contains basic example code that can be run on our test bench for illu
     
 - Commands call upon methods defined in the associated subsytem (Example: **SpinIntakeIn.java**)
 
-       **public SpinIntakeIn(IntakeSubsystem subsystem) {
+       public SpinIntakeIn(IntakeSubsystem subsystem) {
          // Use addRequirements() here to declare subsystem dependencies.
          m_IntakeSubsystem = subsystem;
          addRequirements(subsystem);
-       }**
+       }
        ...
        
        // Called every time the scheduler runs while the command is scheduled.
