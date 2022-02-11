@@ -8,8 +8,8 @@ This repo contains basic example code that can be run on our test bench for illu
         .whenHeld(new SpinIntakeIn(m_IntakeSubsystem));
     
 - Commands call upon methods defined in the associated subsytem (Example: **SpinIntakeIn.java**)
-     public class SpinIntakeIn extends CommandBase {
-          final IntakeSubsystem m_IntakeSubsystem;
+          public class SpinIntakeIn extends CommandBase {
+               final IntakeSubsystem m_IntakeSubsystem;
           /** Creates a new SpinIntake. */
           public SpinIntakeIn(IntakeSubsystem subsystem) {
             // Use addRequirements() here to declare subsystem dependencies.
