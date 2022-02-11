@@ -8,21 +8,14 @@ This repo contains basic example code that can be run on our test bench for illu
         .whenHeld(new SpinIntakeIn(m_IntakeSubsystem));
     
 - Commands call upon methods defined in the associated subsytem (Example: **SpinIntakeIn.java**)
-     public class SpinIntakeIn extends CommandBase {
-       final IntakeSubsystem m_IntakeSubsystem;
-       /** Creates a new SpinIntake. */
+
        **public SpinIntakeIn(IntakeSubsystem subsystem) {
          // Use addRequirements() here to declare subsystem dependencies.
          m_IntakeSubsystem = subsystem;
          addRequirements(subsystem);
        }**
-
-       // Called when the command is initially scheduled.
-       @Override
-       public void initialize() {
-         System.out.println("Spinning Intake In");
-       }
-
+       ...
+       
        // Called every time the scheduler runs while the command is scheduled.
        @Override
        **public void execute() {
