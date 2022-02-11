@@ -1,7 +1,7 @@
 # CougarBench
-This repo contains basic example code that can be run on our test bench for illustrative purposes
+This repo contains basic example code that can be run on our test bench for illustrative purposes.
 
-# Program flow
+# Program flow - How to program a motor command and tie it to a controller button
 - Controllers, buttons, and their associated commands are defined in **RobotContainer.java.**
      XboxController Controller1 = new XboxController(0);
          new JoystickButton(Controller1, Button.kA.value)
@@ -60,4 +60,4 @@ This repo contains basic example code that can be run on our test bench for illu
      }
 
 # Additional Resources
- - 5901 Progrmaming guide: https://team5901.github.io/Programming-Guide/
+ - 5901 Programming guide: https://team5901.github.io/Programming-Guide/
