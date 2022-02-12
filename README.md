@@ -2,9 +2,9 @@
 This repo contains basic example code that can be run on our test bench for illustrative purposes.
 
 # Program flow - How to program a motor command and tie it to a controller button
-- Controllers, buttons, and their associated commands are defined in **RobotContainer.java**
-- 
-Code
+
+- Controllers, buttons, and their associated commands are defined in **RobotContainer.java** 
+
      XboxController Controller1 = new XboxController(0);
      new JoystickButton(Controller1, Button.kA.value).whenHeld(new SpinIntakeIn(m_IntakeSubsystem));
     
@@ -34,7 +34,7 @@ Code
        public boolean isFinished() {
          return false;
        }
-     }
+
 - Subsystems contain the methods to actuate motors/pneumatics as well as the controller definitions and declarations (Example: **IntakeSubsystem.java**)
 
        private final WPI_TalonSRX IntakeMotor = new WPI_TalonSRX(6);
@@ -58,7 +58,6 @@ Code
        public void periodic() {
          // This method will be called once per scheduler run
        }
-     }
 
 # Additional Resources
  - 5901 Programming guide: https://team5901.github.io/Programming-Guide/
