@@ -2,7 +2,8 @@
 This repo contains basic example code that can be run on our test bench for illustrative purposes.
 
 # Program flow - How to program a motor command and tie it to a controller button
-- Controllers, buttons, and their associated commands are defined in **RobotContainer.java.**
+- Controllers, buttons, and their associated commands are defined in **RobotContainer.java**
+- 
 Code
      XboxController Controller1 = new XboxController(0);
      new JoystickButton(Controller1, Button.kA.value).whenHeld(new SpinIntakeIn(m_IntakeSubsystem));
