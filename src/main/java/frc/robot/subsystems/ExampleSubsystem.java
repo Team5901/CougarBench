@@ -4,11 +4,24 @@
 
 package frc.robot.subsystems;
 
+import edu.wpi.first.wpilibj.PneumaticsModuleType;
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class ExampleSubsystem extends SubsystemBase {
+  Solenoid solenoid1 = new Solenoid(PneumaticsModuleType.CTREPCM, 0);
+
+
   /** Creates a new ExampleSubsystem. */
   public ExampleSubsystem() {}
+
+  public void pistonOut(){
+    solenoid1.set(true);
+  }
+
+  public void pistonIn(){
+    solenoid1.set(false);
+  }
 
   @Override
   public void periodic() {

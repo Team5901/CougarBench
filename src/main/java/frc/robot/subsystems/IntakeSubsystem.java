@@ -15,12 +15,12 @@ public class IntakeSubsystem extends SubsystemBase {
 
   public void IntakeIn(){
     //set motor to 100% output in positive direction
-    IntakeMotor.set(.3);
+    IntakeMotor.set(0.1);
   }
 
   public void IntakeOut(){
     //sets motor to 100% output in negative direction
-    IntakeMotor.set(-0.3);
+    IntakeMotor.set(-0.1);
   }
 
   public void IntakeStop(){

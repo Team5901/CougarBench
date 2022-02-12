@@ -8,6 +8,8 @@ import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.XboxController.Button;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.commands.MovePistonIn;
+import frc.robot.commands.MovePistonOut;
 import frc.robot.commands.SpinIntakeIn;
 import frc.robot.commands.SpinIntakeOut;
 import frc.robot.subsystems.ExampleSubsystem;
@@ -47,6 +49,12 @@ public class RobotContainer {
 
     new JoystickButton(Controller1, Button.kB.value)
         .whenHeld(new SpinIntakeOut(m_IntakeSubsystem));
+
+    new JoystickButton(Controller1, Button.kX.value)
+    .whenHeld(new MovePistonIn(m_exampleSubsystem));
+
+    new JoystickButton(Controller1, Button.kY.value)
+    .whenHeld(new MovePistonOut(m_exampleSubsystem));
   
 
 
