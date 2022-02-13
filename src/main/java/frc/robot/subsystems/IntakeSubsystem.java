@@ -6,10 +6,13 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
+import edu.wpi.first.wpilibj.PneumaticsModuleType;
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class IntakeSubsystem extends SubsystemBase {
   private final WPI_TalonSRX IntakeMotor = new WPI_TalonSRX(6);
+  private final Solenoid IntakeSolenoid = new Solenoid(PneumaticsModuleType.CTREPCM,0);
   /** Creates a new IntakeSubsystem. */
   public IntakeSubsystem() {}
 
@@ -26,6 +29,15 @@ public class IntakeSubsystem extends SubsystemBase {
   public void IntakeStop(){
     IntakeMotor.stopMotor();
   }
+
+  public void PistonOut() {
+    IntakeSolenoid.set(true);
+  }
+  
+  public void PistonIn() {
+    IntakeSolenoid.set(false);
+  }
+
   @Override
   public void periodic() {
     // This method will be called once per scheduler run

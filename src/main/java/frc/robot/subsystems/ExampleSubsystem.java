@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class ExampleSubsystem extends SubsystemBase {
-  Solenoid solenoid1 = new Solenoid(PneumaticsModuleType.CTREPCM, 0);
+  Solenoid solenoid1 = new Solenoid(PneumaticsModuleType.CTREPCM, 1);
 
 
   /** Creates a new ExampleSubsystem. */
